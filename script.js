@@ -37,3 +37,41 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+let mail=document.getElementById("mail");
+let call=document.getElementById('call');
+
+call.href="tel:8988063411";
+mail.href="mailto:pc69269@gmail.com";
+
+console.log(mail.innerText);
+console.log(call.innerText);
+
+let pdf=document.getElementById("pdf");
+pdf.href="Pankaj's Resume (Back).pdf";
+
+document.getElementById('mobile').addEventListener('input',function(){
+  let inputValue = this.value.replace(/\D/g, '');
+  let length=this.value.length;
+  if(length>10){
+    this.value = inputValue.slice(0, 10);
+  }
+})
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  let mobileInput = document.getElementById('mobile');
+  let mobile = mobileInput.value.trim();
+
+  if (mobile.length !== 10) {
+      mobileInput.style.border = '1px solid red'; // Add 'error' class for styling
+      mobileInput.focus();
+      event.preventDefault(); // Prevents form submission if validation fails
+  } 
+});
+document.getElementById('mobile').addEventListener('input', function() {
+  let mobileInput = document.getElementById('mobile');
+  let mobile = mobileInput.value;
+
+  if (mobile.length === 10) {
+      mobileInput.style.border = ''; // Reset border if length becomes 10
+  }
+});

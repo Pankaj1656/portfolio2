@@ -89,7 +89,9 @@ section{
     transition: .5s;
     opacity: .5;
 }
-
+#pdf{
+    cursor: pointer;
+}
 
 .home{
     display: flex;
