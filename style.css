@@ -260,6 +260,7 @@ section{
     border-right: .2rem solid var(--main-color);
     border-left: .2rem solid var(--main-color);
     border-bottom: .2rem solid var(--second-bg-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 .about-content{
     text-align: center;
@@ -703,4 +704,48 @@ section{
     width: 38px;
     height: 38px;
   }
+}
+@media(max-width:462px){
+    .home{
+        font-size: 50%;
+    }
+    .home-content h1{
+        font-size: 5.2rem;
+    }
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+@media(max-width:376px){
+    .home{
+        font-size: 50%;
+        justify-content: center;
+    }
+    .home-content  {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content  h1{
+        font-size: 4rem;
+    }
+    .home-content  .text-animated h3{
+        font-size: 3rem;
+    }
+}
+@keyframes aboutSpinner{
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
 }
